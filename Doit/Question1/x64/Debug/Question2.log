@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\user\Desktop\procademy\DoItCodingTest\Question2\main.cpp(11,21): warning C4101: 'llNum' :참조되지 않은 지역 변수입니다.
+  Question2.vcxproj -> C:\Users\user\Desktop\procademy\DoItCodingTest\Question2\x64\Debug\Question2.exe

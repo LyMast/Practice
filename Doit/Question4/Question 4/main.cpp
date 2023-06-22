@@ -1,10 +1,14 @@
 #include <iostream>
-#include <array>
-#include <vector>
+//#include <array>
+//#include <vector>
 
 using namespace std;
 
-array<array<int, 1024>, 1024> g_arr;
+#define dfMAX_N 1025
+
+int A[dfMAX_N][dfMAX_N];
+int S[dfMAX_N][dfMAX_N];
+
 
 
 int main()
@@ -13,6 +17,71 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 
+
+	int iN, iM;
+	cin >> iN >> iM;
+
+
+	int input;
+	for (int iX = 1; iX <= iN; ++iX)
+	{
+		for (int iY = 1; iY <= iN; ++iY)
+		{
+			cin >> input;
+			A[iX][iY] = input;
+			S[iX][iY] = S[iX][iY - 1] + S[iX - 1][iY] - S[iX - 1][iY - 1] + input;
+		}
+	}
+
+
+
+	int iX1, iY1, iX2, iY2, iResult;
+	for (int i = 0; i < iM; ++i)
+	{
+		cin >> iX1 >> iY1 >> iX2 >> iY2;
+
+		iResult = S[iX2][iY2] - S[iX1 - 1][iY2] - S[iX2][iY1 - 1] + S[iX1 - 1][iY1 - 1];
+		cout << iResult << "\n";
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*	 肋给等 立辟 规过
+	* 
 	int iN;
 	int iM;
 
@@ -73,7 +142,7 @@ int main()
 	}
 
 
-
+	//*/
 
 
 

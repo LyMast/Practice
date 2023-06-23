@@ -39,7 +39,7 @@ int main()
 	}
 	//*/
 
-	int iCount = 0;
+	long iCount = 0;
 
 	for (int i = 0; i < iN; ++i)
 	{
